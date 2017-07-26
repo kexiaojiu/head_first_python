@@ -5,7 +5,7 @@ from distutils.core import setup
 
 setup(
     name            = 'nester_jacob',
-    version         = '1.1.0',
+    version         = '1.2.0',
     py_modules      = ['nester_jacob'],
     author          = 'Jie, Ke',
     author_email    = 'kejie@aliyun.com',
