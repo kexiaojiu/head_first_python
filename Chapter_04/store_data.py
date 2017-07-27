@@ -2,6 +2,9 @@
 #coding=utf-8
 import os
 
+man =[]
+other =[]
+
 filename = 'sketch.txt'
 
 try:
@@ -12,6 +15,12 @@ else:
     for each_line in data:
         try:
             (role, line_spoken) = each_line.split(':', 1)
+            line_spoken = line_spoken.strip()
+            if role == 'Man':
+                man.append(line_spoken)
+            else:
+                other.append(line_spoken)
+                
         except ValueError:
             print("The strings are wrong!")
         else:
@@ -20,3 +29,5 @@ else:
             print(line_spoken, end='')
 
     data.close()
+print(man)
+print(other)
