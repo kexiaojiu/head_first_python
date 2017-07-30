@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #coding=utf-8
 import os
+from nester_jacob import print_lol
 
 man =[]
 other =[]
@@ -29,5 +30,18 @@ else:
             print(line_spoken, end='')
 
     data.close()
-print(man)
-print(other)
+    
+try:
+    man_file = open('man_file.txt', 'w')
+    other_file = open('other_file.txt', 'w')
+    print_lol(man, fh=man_file)
+    print_lol(other, fh=other_file)
+
+    
+except FileNotFoundError:
+    print('File error!')
+
+finally:
+    man_file.close()
+    other_file.close()
+
